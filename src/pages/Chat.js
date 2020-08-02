@@ -113,8 +113,7 @@ function Chat(props) {
 		<>
 			<h1>HI</h1>
 			<div id="player"></div>
-			<div id="other1"></div>
-			<div id="other2"></div>
+			<div id="other"></div>
 		</>
 	)
 }
