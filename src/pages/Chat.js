@@ -37,11 +37,42 @@ function Chat(props) {
 	useEffect(() => {
 		rtc.client = AgoraRTC.createClient({codec: "h264", mode: "rtc"});
 
+		rtc.client.on("stream-added", (event) => {
+			let remoteStream = event.stream;
+			let id = remoteStream.getId();
+
+			if(id !== rtc.params.uid) {
+				rtc.client.subscribe(remoteStream, (error) => {
+					console.log("stream subscribe failed", error);
+				});
+			}
+
+			console.log("stream subscribe successful, uid:" + id);
+		});
+
+		rtc.client.on("stream-subscribed", (event) => {
+			let remoteStream = event.stream;
+			let id = remoteStream.getId();
+
+			remoteStream.play("other");
+			console.log("stream subscribed: " + id);
+		});
+
+		rtc.client.on("stream-removed", (event) => {
+			let remoteSteam = event.stream;
+			let id = remoteSteam.getId();
+
+			remoteSteam.stop("other");
+
+			console.log("stream removed: " + id); 
+		})
+
 		rtc.client.init(options.appId, () => {
 			console.log("init success");
 
 			rtc.client.join(null, options.channel, null, (uid) => {
 				console.log(`joined channel ${options.channel} with uid: ${uid}`);
+				rtc.params.uid = uid;
 				rtc.local = AgoraRTC.createStream({streamID: uid, audio: true, video: true, screen: false});
 
 				rtc.local.init(() => {
@@ -82,6 +113,8 @@ function Chat(props) {
 		<>
 			<h1>HI</h1>
 			<div id="player"></div>
+			<div id="other1"></div>
+			<div id="other2"></div>
 		</>
 	)
 }
