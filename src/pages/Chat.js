@@ -94,14 +94,17 @@ function Chat(props) {
 
 
         return () => {
-            rtc.client.leave(() => {
-                rtc.local.stop();
-                rtc.local.close();
-
-                console.log("client leave successful");
-            }, (error) => {
-                console.log("client leave failed");
-            })
+            if(rtc.client && rtc.local) {
+                rtc.client.unpublish(rtc.local);
+                rtc.client.leave(() => {
+                    rtc.local.stop();
+                    rtc.local.close();
+    
+                    console.log("client leave successful");
+                }, (error) => {
+                    console.log("client leave failed");
+                })
+            }
         }
     }, [])
 

@@ -3,10 +3,12 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 import './App.css';
 import Join from './pages/Join';
 import Chat from './pages/Chat';
+import Navbar from './components/Navbar';
 
 function App() {
 	return (
 		<Router>
+			<Navbar />
 			<Route exact path="/" component={Join} />
 			<Route exact path="/chat" component={Chat} />
 		</Router>
