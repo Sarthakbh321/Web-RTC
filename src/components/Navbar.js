@@ -27,12 +27,12 @@ function Navbar() {
 	const classes = useStyles();
 	return (
 		<div className={classes.root}>
-			<AppBar position="static" className={classes.bar} elevation={4}>
+			<AppBar position="static" className={classes.bar} elevation={7}>
 				<Toolbar>
 					<Link to="/">
 						<img src="./CC LOGO-01.svg" className={classes.icon} alt="logo"/>
 					</Link>
-					<Typography variant="p" className={classes.navHead}>Codechef-VIT RTC</Typography>
+					<Typography className={classes.navHead}>Codechef-VIT RTC</Typography>
 				</Toolbar>
 			</AppBar>
 		</div>

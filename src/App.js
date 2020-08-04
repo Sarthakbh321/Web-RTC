@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import './App.css';
+
 import Join from './pages/Join';
 import Chat from './pages/Chat';
 import Navbar from './components/Navbar';

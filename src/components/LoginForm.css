@@ -45,8 +45,14 @@
 .form-head {
 	font-family: 'Paytone One', sans-serif !important;
 	font-size: 3rem !important;
-	margin-top: 3% !important;
+	margin-top: 4% !important;
 	text-align: center;
+}
+
+@media screen and (max-width: 440px) {
+	.form-head {
+		font-size: 2.4rem !important;
+	}
 }
 
 .form-subhead {
