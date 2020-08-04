@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
 .form-container {
 	display: flex;
 	justify-content: center;
@@ -31,4 +33,19 @@
 	.form-div {
 		width: 80%;
 	}
+}
+
+.form-head {
+	font-family: 'Paytone One', sans-serif !important;
+	font-size: 3rem !important;
+	margin-bottom: 10% !important;
+	text-align: center;
+}
+
+
+.join-btn {
+	margin-top: 5% !important;
+	background-color: blueviolet !important;
+	color: white !important;
+	font-weight: bold !important;
 }
