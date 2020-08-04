@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {Container, Button, TextField} from "@material-ui/core";
+import LoginForm from "../components/LoginForm";
 
 function Join() {
 	const [room, setRoom] = useState("");
@@ -11,21 +12,7 @@ function Join() {
 	
 	return (
 		<Container className="App">
-			<TextField variant="outlined" placeholder="Room" onChange={handleRoomChange} value={room}></TextField>
-			<Button 
-				variant="contained"
-				component={Link}
-				to={{
-					pathname: '/chat',
-					state: {
-						params: {
-							room
-						}
-					}
-				}}
-			>
-				Join
-			</Button>
+			<LoginForm roomChange={handleRoomChange} room={room}/>
 		</Container>
 	)
 }
