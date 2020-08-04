@@ -18,15 +18,22 @@
 
 .form-div {
 	background-color: #f8f9fa;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
 	width: 50%;
 	height: 70vh;
 
 	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+
+	padding: 0 3%;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
 }
 
 @media screen and (max-width: 550px) {
@@ -38,14 +45,39 @@
 .form-head {
 	font-family: 'Paytone One', sans-serif !important;
 	font-size: 3rem !important;
-	margin-bottom: 10% !important;
+	margin-top: 3% !important;
 	text-align: center;
 }
 
+.form-subhead {
+	text-align: center !important;
+	padding-top: 5%;
+	
+	color: rgb(116, 116, 116);
+	font-size: 0.95rem !important;
+}
+
+
+.join-input {
+	width: 70% !important;
+}
 
 .join-btn {
 	margin-top: 5% !important;
 	background-color: blueviolet !important;
 	color: white !important;
 	font-weight: bold !important;
+
+	width: 100px;
+}
+
+.form-footer {
+	text-align: center !important;
+	padding-bottom: 3%;
+	padding-top: 3%;
+	
+	color: rgb(161, 161, 161);
+	font-size: 0.95rem !important;
+
+	border-top: 1px solid rgb(185, 185, 185);
 }
