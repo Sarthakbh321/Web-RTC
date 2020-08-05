@@ -8,6 +8,6 @@ body {
 
   /* background: rgb(0,173,181);
   background: linear-gradient(45deg, rgba(0,129,135,1) 0%, rgba(0,205,214,1) 58%, rgba(0,244,255,1) 100%); */
-  background-image: url("/Large-Triangles.svg");
+  background-image: url("/Large-Triangles.svg"); /* background taken from: https://www.svgbackgrounds.com/ */
 }
 
