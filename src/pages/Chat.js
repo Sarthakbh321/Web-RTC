@@ -112,11 +112,10 @@ function Chat(props) {
         return <Redirect to="/" />
     }
     return ( 
-        <>
-            <h1> HI </h1> 
+        <div className="chat-section">
             <div id="player"> </div> 
-            <div id="other"> </div> 
-        </>
+            {/* <div id="other"> </div>  */}
+        </div>
     )
 }
 
