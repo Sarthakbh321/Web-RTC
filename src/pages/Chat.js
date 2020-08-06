@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Redirect } from "react-router";
 import AgoraRTC from "agora-rtc-sdk";
 import './Chat.css';
+import { IconButton } from "@material-ui/core";
+import {Close} from "@material-ui/icons";
 
 function Chat(props) {
     const [redirect, setRedirect] = useState(false);
@@ -113,6 +115,7 @@ function Chat(props) {
     }
     return ( 
         <div className="chat-section">
+            <IconButton href="/" className="close-btn"><Close size={32}/></IconButton>
             <div id="player"> </div> 
             {/* <div id="other"> </div>  */}
         </div>

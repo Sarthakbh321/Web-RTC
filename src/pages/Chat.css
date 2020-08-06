@@ -3,6 +3,12 @@
 	height: 100vh;
 }
 
+.close-btn {
+	color: white !important;
+	position: absolute !important;
+	z-index: 1;
+}
+
 
 #player {
 	width: 640px;
