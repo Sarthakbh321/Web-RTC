@@ -19,7 +19,7 @@ function Chat(props) {
     }
 
     let options = {
-        appId: "a3e7e983cf0848d08e0b6b97863c344b",
+        appId: process.env.REACT_APP_APP_ID,
         channel: null,
         uid: null,
         token: null,
